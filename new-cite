@@ -40,8 +40,8 @@ body, html {
 
 main() {
 
-  clear
-  echo -e "\n"
+  clear;
+  echo -e "\n";
 
   # get project name
   read -p "project name: " project_name;
@@ -49,23 +49,23 @@ main() {
   echo -e "\n";
   
   # build directory tree
-  echo "building directory tree..."
+  echo "building directory tree...";
   mkdir ./"$project_name"/css/;
   mkdir ./"$project_name"/js/;
   mkdir -p ./"$project_name"/images/icons/;
   mkdir -p ./"$project_name"/images/photos/;
 
   # initialize html
-  echo "initializing html..."
+  echo "initializing html...";
   touch ./"$project_name"/index.html;
   echo "$html_text" > ./"$project_name"/index.html;
 
   # initialize css
-  echo "initializing css..."
+  echo "initializing css...";
   touch ./"$project_name"/css/index.css;
   echo "$css_text" > ./"$project_name"/css/index.css;
 
-  echo "done"
+  echo "done";
   echo -e "\n";
 }
 
