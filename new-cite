@@ -1,0 +1,72 @@
+#!/bin/bash
+
+# basic site init
+# GNU Affero General Public License v3.0
+
+# html text
+html_text="<!DOCTYPE html>
+<html lang=\"en\">
+  <head>
+    <meta charset=\"UTF-8\"/>
+    <meta name=\"viewport\" content=\"width=device-width initial-scale=1.0\"/>
+    <link rel=\"stylesheet\" href=\"./css/index.css\"/>
+    <title><title>
+  </head>
+  <body>
+  </body>
+<html>"
+
+# css text
+css_text="
+/* variables */
+:root {
+}
+
+/* init */
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/* keyframes */
+
+/* main */
+body, html {
+}
+
+/* hover */
+
+/* media queries */"
+
+main() {
+
+  clear
+  echo -e "\n"
+
+  # get project name
+  read -p "project name: " project_name;
+  mkdir "$project_name";
+  echo -e "\n";
+  
+  #build directory tree
+  echo "building directory tree..."
+  mkdir ./"$project_name"/css;
+  mkdir ./"$project_name"/js;
+  mkdir -p ./"$project_name"/images/icons;
+  mkdir -p ./"$project_name"/images/photos;
+
+  # initialize html
+  echo "initializing html..."
+  touch ./"$project_name"/index.html;
+  echo "$html_text" > ./"$project_name"/index.html;
+
+  # initialize css
+  echo "initializing css..."
+  touch ./"$project_name"/css/index.css;
+  echo "$css_text" > ./"$project_name"/css/index.css;
+
+  echo "done"
+  echo -e "\n";
+}
+
+main
