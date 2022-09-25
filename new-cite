@@ -50,10 +50,10 @@ main() {
   
   #build directory tree
   echo "building directory tree..."
-  mkdir ./"$project_name"/css;
-  mkdir ./"$project_name"/js;
-  mkdir -p ./"$project_name"/images/icons;
-  mkdir -p ./"$project_name"/images/photos;
+  mkdir ./"$project_name"/css/;
+  mkdir ./"$project_name"/js/;
+  mkdir -p ./"$project_name"/images/icons/;
+  mkdir -p ./"$project_name"/images/photos/;
 
   # initialize html
   echo "initializing html..."
