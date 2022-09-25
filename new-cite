@@ -48,7 +48,7 @@ main() {
   mkdir "$project_name";
   echo -e "\n";
   
-  #build directory tree
+  # build directory tree
   echo "building directory tree..."
   mkdir ./"$project_name"/css/;
   mkdir ./"$project_name"/js/;
